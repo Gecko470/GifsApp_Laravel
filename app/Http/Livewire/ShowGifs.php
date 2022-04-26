@@ -36,7 +36,7 @@ class ShowGifs extends Component
     public function buscar()
     {
 
-        $this->respuesta = Http::get("http://api.giphy.com/v1/gifs/search?api_key=oyRB1czUtgUqAGWGUfET37v9KnoYq3oa&q=" . $this->termino . "&limit=45");
+        $this->respuesta = Http::get("http://api.giphy.com/v1/gifs/search?mi_api_key&q=" . $this->termino . "&limit=45");
         $this->datos = $this->respuesta->json();
 
         if ($this->datos["data"] == []) {
